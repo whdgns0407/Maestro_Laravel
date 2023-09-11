@@ -19,7 +19,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'id',
+        'user_id',
         'email',
+        'email_code',
+        'email_authentication',
+        'user_id',
         'password',
         'nickname',
         'remember_token',
@@ -27,6 +31,7 @@ class User extends Authenticatable
         'krw_using',
         'btc',
         'btc_using',
+        'admin',
         'created_at',
         'updated_at',
     ];

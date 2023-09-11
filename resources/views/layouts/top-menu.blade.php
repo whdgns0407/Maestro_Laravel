@@ -19,7 +19,7 @@
                     <a class="dropdown-item" href="{{ route('board_list_get', ['board_name' => 'free']) }}">자유게시판</a>
                     <a class="dropdown-item" href="{{ route('board_list_get', ['board_name' => 'mining']) }}">채굴게시판</a>
                     <a class="dropdown-item" href="{{ route('board_list_get', ['board_name' => 'pnl']) }}">손익인증게시판</a>
-                    <a class="dropdown-item" href="{{ route('board_list_get', ['board_name' => 'registrationgreeting']) }}">가입인사</a>
+                    <a class="dropdown-item" href="{{ route('board_list_get', ['board_name' => 'registerationgreeting']) }}">가입인사</a>
                 </div>
             </li>
 
