@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
+use Illuminate\Support\Facades\Session;
+
 class loginController extends Controller
 {
     public function login_get()
@@ -54,6 +56,11 @@ class loginController extends Controller
     public function logout()
     {
         Auth::logout();
+
+        $newToken = csrf_token();
+
+        // 세션에 새로운 토큰 저장
+        Session::put('_token', $newToken);
 
         return redirect()->route('welcome');
     }
