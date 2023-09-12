@@ -314,7 +314,7 @@ class boardController extends Controller
         $comment = new Comment();
         $comment->board_id = $board_id;
         $comment->user_id = $user_id;
-        $comment->user_id = $nickname;
+        $comment->nickname = $nickname;
         $comment->body = $request_comment;
         $comment->delete = 0;
         $comment->ban = 0;
