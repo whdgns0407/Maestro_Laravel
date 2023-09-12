@@ -70,6 +70,7 @@
             $("#content").val("입금은행: \n입금자명: \n입금금액: ");
         });
 
+
         function submit_disable() {
             $("#customer_form").submit();
             $("#submit_button").attr("disabled", true);
@@ -87,4 +88,5 @@
         }
     </script>
 </body>
+
 </html>

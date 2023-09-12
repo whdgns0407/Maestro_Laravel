@@ -125,6 +125,10 @@ class registerController extends Controller
             'user_id' => $validation['user_id'],
             'nickname' =>  $validation['nickname'],
             'password' => Hash::make($validation['password']),
+            'krw' => 1000000,
+            'krw_using' => 0,
+            'btc' => 10,
+            'btc_using' => 0,
         ]);
         return '회원가입성공';
     }
@@ -179,7 +183,7 @@ class registerController extends Controller
         $user_sql->save();
 
         $details = [
-            'subject' => '[레트로M] 이메일 인증번호',
+            'subject' => '[코인파크] 이메일 인증코드',
             'code' => $code,
         ];
 
