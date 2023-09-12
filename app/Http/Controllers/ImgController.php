@@ -14,14 +14,13 @@ use Ramsey\Uuid\Uuid;
 use App\Models\Photo;
 
 
-class ImgController extends Controller
+class imgController extends Controller
 {
     //
     public function upload_get(Request $request)
     {
         return "제공하지 않음";
     }
-
 
 
     public function upload_post(Request $request)
