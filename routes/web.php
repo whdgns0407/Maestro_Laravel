@@ -61,6 +61,16 @@ Route::middleware(['auth'])->group(function () {
     // 사진 업로드 post
     Route::post('/img_upload', [App\Http\Controllers\imgController::class, 'upload_post'])->name('img_upload_post');
 
+
+    // 코인 -> KRW 스왑 INDEX
+    Route::get('/swap/coin_to_krw', [App\Http\Controllers\swapController::class, 'swap_coin_to_krw_index'])->name('swap_coin_to_krw');
+
+    // KRW -> 코인 스왑 INDEX
+    Route::get('/swap/krw_to_coin', [App\Http\Controllers\swapController::class, 'swap_krw_to_coin_index'])->name('swap_krw_to_coin');
+
+    // SWAP ajax
+    Route::get('/swap/price_ajax', [App\Http\Controllers\swapController::class, 'price_ajax'])->name('swap_price_ajax');
+
     // 관리자
     Route::get('/admin/customer/{status}', [App\Http\Controllers\admin\customerController::class, 'get'])->name('admin_customer_get');
 
