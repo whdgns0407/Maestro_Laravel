@@ -11,15 +11,22 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link disabled" href="">거래소</a>
+                <a class="nav-link disabled" href="">거래하기</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SWAP(스왑)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('swap_krw_to_coin') }}">원화->코인</a>
+                    <a class="dropdown-item" href="{{ route('swap_coin_to_krw') }}">코인->원화</a>                   
+                </div>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link disabled" href="">입출금</a>
-            </li>
-
-            <li class="nav-item active">
-                <a class="nav-link disabled" href="">스왑</a>
+                <a class="nav-link disabled" href="">입출금(지갑관리)</a>
             </li>
 
             <li class="nav-item dropdown">
