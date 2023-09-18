@@ -68,8 +68,11 @@ Route::middleware(['auth'])->group(function () {
     // KRW -> 코인 스왑 INDEX
     Route::get('/swap/krw_to_coin', [App\Http\Controllers\swapController::class, 'swap_krw_to_coin_index'])->name('swap_krw_to_coin');
 
-    // SWAP ajax
+    // SWAP ajax (코인 시세, 유저정보)
     Route::get('/swap/price_ajax', [App\Http\Controllers\swapController::class, 'price_ajax'])->name('swap_price_ajax');
+
+    // SWAP 버튼 클릭
+    Route::post('/swap/button_ajax', [App\Http\Controllers\swapController::class, 'swap_button_ajax'])->name('swap_button_ajax');
 
     // 관리자
     Route::get('/admin/customer/{status}', [App\Http\Controllers\admin\customerController::class, 'get'])->name('admin_customer_get');
@@ -93,6 +96,10 @@ Route::get('/img/view/{uuid}', [App\Http\Controllers\imgController::class, 'img_
 // 메인창 띄우기
 Route::get('/', [App\Http\Controllers\indexController::class, 'index'])->name('welcome');
 
+
+// 거래소 (trade)
+Route::get('/trade/{coin}', [App\Http\Controllers\TradeController::class, 'index'])->name('trade_index');
+
 // 회원가입 get요청
 Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register_get'])->name('register_get');
 
@@ -104,7 +111,6 @@ Route::post('/register/nickname/check', [App\Http\Controllers\Auth\RegisterContr
 
 // 회원가입 post요청
 Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register_post'])->name('register_post');
-
 
 
 // 로그인 get요청
