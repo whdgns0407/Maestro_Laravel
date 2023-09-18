@@ -34,6 +34,8 @@
     @include('layouts.top-menu')
     <div class="jumbotron" style="width:100%;">
         <h1 class="text-center" style="font-size:55px;">{{ config('app.name') }}</h1>
+        <h5 class="text-center" style="font-size:20px;">본 사이트는 실제 가상화폐거래소가 아니며 포트폴리오용으로 만든 사이트임을 알려드립니다.</h5>
+        <h5 class="text-center" style="font-size:20px;">본 사이트에 당신의 자산을 절대 입금하지 마십시오.</h5>
         <!--
         <p class="text-center">
             <iframe width="50%" height="400" src="https://www.youtube.com/embed/ebCPZgaEj0w"
