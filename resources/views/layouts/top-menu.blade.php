@@ -10,8 +10,23 @@
                 <a class="nav-link" href="{{ route('welcome') }}">{{ config('app.name') }}</a>
             </li>
 
-            <li class="nav-item active">
-                <a class="nav-link disabled" href="">거래하기</a>
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    거래하기
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('trade_index', ['coin' => 'BTC']) }}">비트코인(BTC)</a>
+                    <a class="dropdown-item" href="{{ route('trade_index', ['coin' => 'ETH']) }}">이더리움(ETH)</a>
+                    <a class="dropdown-item" href="{{ route('trade_index', ['coin' => 'BCH']) }}">비트코인캐시(BCH)</a>
+                    <a class="dropdown-item" href="{{ route('trade_index', ['coin' => 'ETC']) }}">이더리움클래식(ETC)</a>
+                    <a class="dropdown-item" href="{{ route('trade_index', ['coin' => 'EOS']) }}">이오스(EOS)</a>
+                    <a class="dropdown-item" href="{{ route('trade_index', ['coin' => 'XRP']) }}">리플(XRP)</a>
+                    <a class="dropdown-item" href="{{ route('trade_index', ['coin' => 'ADA']) }}">에이다(ADA)</a>
+                    <a class="dropdown-item" href="{{ route('trade_index', ['coin' => 'DOGE']) }}">도지(DOGE)</a>
+                </div>
             </li>
 
             <li class="nav-item dropdown">
@@ -21,12 +36,16 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('swap_krw_to_coin') }}">원화->코인</a>
-                    <a class="dropdown-item" href="{{ route('swap_coin_to_krw') }}">코인->원화</a>                   
+                    <a class="dropdown-item" href="{{ route('swap_coin_to_krw') }}">코인->원화</a>
                 </div>
             </li>
 
             <li class="nav-item active">
                 <a class="nav-link disabled" href="">입출금(지갑관리)</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="">거래내역</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -35,7 +54,8 @@
                     게시판
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('board_list_get', ['board_name' => 'coininfo']) }}">코인정보</a>
+                    <a class="dropdown-item"
+                        href="{{ route('board_list_get', ['board_name' => 'coininfo']) }}">코인정보</a>
                     <a class="dropdown-item" href="{{ route('board_list_get', ['board_name' => 'free']) }}">자유게시판</a>
                     <a class="dropdown-item" href="{{ route('board_list_get', ['board_name' => 'mining']) }}">채굴게시판</a>
                     <a class="dropdown-item" href="{{ route('board_list_get', ['board_name' => 'pnl']) }}">손익인증게시판</a>
