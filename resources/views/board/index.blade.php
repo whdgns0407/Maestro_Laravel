@@ -155,16 +155,26 @@
     <script>
         $(document).ready(function() {
             // Agent 라이브러리를 사용하여 모바일 디바이스 여부 확인
-            var isMobile = false;
-            if (typeof Agent !== 'undefined') {
-                isMobile = Agent.isMobile();
+            function isMobile() {
+                return window.innerWidth <= 768; // 화면 너비가 768px 이하일 때 모바일로 간주
             }
 
-            // 모바일 디바이스인 경우
-            if (isMobile) {
-                // <td> 요소들의 폰트 크기를 10px로 변경
-                $('td').css('font-size', '5px');
+            function adjustFontSize() {
+                if (isMobile()) {
+                    // 모바일 환경일 때 폰트 크기를 조절
+                    $('td, th, button').css('font-size', '9px'); // 원하는 폰트 크기로 변경
+                } else {
+                    // 모바일 환경이 아닐 때 기본 폰트 크기로 복원
+                    $('td, th, button').css('font-size', ''); // 비워서 기본값으로 되돌림
+                }
             }
+
+            // 최초 준비 완료 시 폰트 크기 조절
+            adjustFontSize();
+
+            // 창 크기 변경 시 폰트 크기 조절
+            $(window).resize(adjustFontSize);
+
         });
     </script>
 
