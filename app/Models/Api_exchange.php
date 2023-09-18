@@ -14,6 +14,7 @@ class Api_exchange extends Model
         'exchange',
         'type',
         'markets_code',
+        'korean_name',
         'sell5_amount',
         'sell5_price',
         'sell4_amount',
@@ -35,6 +36,4 @@ class Api_exchange extends Model
         'buy5_amount',
         'buy5_price',
     ];
-
-
 }

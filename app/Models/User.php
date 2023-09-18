@@ -27,9 +27,9 @@ class User extends Authenticatable
         'password',
         'nickname',
         'remember_token',
+
         'KRW',
         'KRW_using',
-
         'BTC',
         'BTC_using',
         'ETH',
@@ -68,7 +68,12 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
+
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+
+
+
+
     ];
 }
