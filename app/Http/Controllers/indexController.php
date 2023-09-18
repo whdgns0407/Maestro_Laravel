@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\CommonController;
+
 use App\Models\Board_category;
 use App\Models\Board_title_category;
 use App\Models\Board;
 
-use Illuminate\Support\Facades\Auth;
 
 
 class indexController extends Controller
