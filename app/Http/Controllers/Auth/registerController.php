@@ -44,7 +44,7 @@ class registerController extends Controller
             return response('빈 값을 입력하였습니다.', 400);
         }
 
-        $user_id_strlen =   mb_strlen($user_id, 'UTF-8');
+        $user_id_strlen =  mb_strlen($user_id, 'UTF-8');
 
         if ($user_id_strlen >= 20) {
             return response('20글자 이내로만 입력할 수 있습니다.', 422);
@@ -121,14 +121,38 @@ class registerController extends Controller
             'password' => 'required|min:1|max:256|confirmed',
         ]);
 
+
+    
         User::create([
             'user_id' => $validation['user_id'],
             'nickname' =>  $validation['nickname'],
             'password' => Hash::make($validation['password']),
-            'krw' => 1000000,
-            'krw_using' => 0,
-            'btc' => 10,
-            'btc_using' => 0,
+            'KRW' => 100000000.0000000000000000000000000000000000000000000001234564564564,
+            'KRW_using' => 0,
+
+            'BTC' => 10.00000000000000000000,
+            'BTC_using' => 0.00000000000000000000,
+
+            'ETH' => 100.00000000000000000000,
+            'ETH_using' => 0.00000000000000000000,
+
+            'BCH' => 200.00000000000000000000,
+            'BCH_using' => 0.00000000000000000000,
+
+            'ETC' => 40000.00000000000000000000,
+            'ETC_using' => 0.00000000000000000000,
+
+            'EOS' => 80000.00000000000000000000,
+            'EOS_using' => 0.00000000000000000000,
+
+            'XRP' => 100000.00000000000000000000,
+            'XRP_using' => 0.00000000000000000000,
+
+            'ADA' => 500000.00000000000000000000,
+            'ADA_using' => 0.00000000000000000000,
+
+            'DOGE' => 1000000.00000000000000000000,
+            'DOGE_using' => 0.00000000000000000000,
         ]);
         return '회원가입성공';
     }
