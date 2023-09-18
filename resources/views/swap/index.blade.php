@@ -31,147 +31,38 @@
                                     @endif
                                 </th>
                             </tr>
+
+
+
+
+
                             <tr>
                                 <th style="width:15%; text-align:center; vertical-align: middle;">코인</th>
                                 <th style="width:31%; text-align:center; vertical-align: middle;">스왑가격</th>
                                 <th style="width:29%; text-align:center; vertical-align: middle;">개수</th>
                                 <th style="width:25%; text-align:center; vertical-align: middle;">스왑</th>
                             </tr>
-                            <tr>
-                                <td style="text-align:center; vertical-align: middle;">BTC</td>
-                                <td id="BTC_price" style="text-align:center; vertical-align: middle;"><img
-                                        src="/img/loading.gif"></td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <input id="BTC_input_text" type="text" style="width:60%;">
-                                    <button id="BTC_max"
-                                        onclick="max_button('{{ $type }}', 'BTC');">최대</button>
-                                </td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <button style="width:100%; text-align:center; vertical-align: middle;"
-                                        onclick="">
-                                        스왑
-                                    </button>
-                                </td>
-                            </tr>
 
-                            <tr>
-                                <td style="text-align:center; vertical-align: middle;">ETH</td>
-                                <td id="ETH_price" style="text-align:center; vertical-align: middle;"><img
-                                        src="/img/loading.gif"></td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <input id="ETH_input_text" type="text" style="width:60%;">
-                                    <button id="ETH_max"
-                                        onclick="max_button('{{ $type }}', 'ETH');">최대</button>
-                                </td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <button style="width:100%; text-align:center; vertical-align: middle;"
-                                        onclick="">
-                                        스왑
-                                    </button>
-                                </td>
-                            </tr>
 
-                            <tr>
-                                <td style="text-align:center; vertical-align: middle;">BCH</td>
-                                <td id="BCH_price" style="text-align:center; vertical-align: middle;"><img
-                                        src="/img/loading.gif"></td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <input id="BCH_input_text" type="text" style="width:60%;">
-                                    <button id="BCH_max"
-                                        onclick="max_button('{{ $type }}', 'BCH');">최대</button>
-                                </td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <button style="width:100%; text-align:center; vertical-align: middle;"
-                                        onclick="">
-                                        스왑
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="text-align:center; vertical-align: middle;">ETC</td>
-                                <td id="ETC_price" style="text-align:center; vertical-align: middle;"><img
-                                        src="/img/loading.gif"></td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <input id="ETC_input_text" type="text" style="width:60%;">
-                                    <button id="ETC_max"
-                                        onclick="max_button('{{ $type }}', 'ETC');">최대</button>
-                                </td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <button style="width:100%; text-align:center; vertical-align: middle;"
-                                        onclick="">
-                                        스왑
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="text-align:center; vertical-align: middle;">EOS</td>
-                                <td id="EOS_price" style="text-align:center; vertical-align: middle;"><img
-                                        src="/img/loading.gif"></td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <input id="EOS_input_text" type="text" style="width:60%;">
-                                    <button id="EOS_max"
-                                        onclick="max_button('{{ $type }}', 'EOS');">최대</button>
-                                </td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <button style="width:100%; text-align:center; vertical-align: middle;"
-                                        onclick="">
-                                        스왑
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="text-align:center; vertical-align: middle;">XRP</td>
-                                <td id="XRP_price" style="text-align:center; vertical-align: middle;"><img
-                                        src="/img/loading.gif"></td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <input id="XRP_input_text" type="text" style="width:60%;">
-                                    <button id="XRP_max"
-                                        onclick="max_button('{{ $type }}', 'XRP');">최대</button>
-                                </td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <button style="width:100%; text-align:center; vertical-align: middle;"
-                                        onclick="">
-                                        스왑
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="text-align:center; vertical-align: middle;">ADA</td>
-                                <td id="ADA_price" style="text-align:center; vertical-align: middle;"><img
-                                        src="/img/loading.gif"></td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <input id="ADA_input_text" type="text" style="width:60%;">
-                                    <button id="ADA_max"
-                                        onclick="max_button('{{ $type }}', 'ADA');">최대</button>
-                                </td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <button style="width:100%; text-align:center; vertical-align: middle;"
-                                        onclick="">
-                                        스왑
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="text-align:center; vertical-align: middle;">DOGE</td>
-                                <td id="DOGE_price" style="text-align:center; vertical-align: middle;"><img
-                                        src="/img/loading.gif"></td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <input id="DOGE_input_text" type="text" style="width:60%;">
-                                    <button id="DOGE_max"
-                                        onclick="max_button('{{ $type }}', 'DOGE');">최대</button>
-                                </td>
-                                <td style="text-align:center; vertical-align: middle;">
-                                    <button style="width:100%; text-align:center; vertical-align: middle;"
-                                        onclick="">
-                                        스왑
-                                    </button>
-                                </td>
-                            </tr>
+                            @foreach ($price_descs as $price_desc)
+                                <tr>
+                                    <td style="text-align:center; vertical-align: middle;">{{ $price_desc->type }}</td>
+                                    <td id="{{ $price_desc->type }}_price" style="text-align:center; vertical-align: middle;">
+                                        <img src="/img/loading.gif">
+                                    </td>
+                                    <td style="text-align:center; vertical-align: middle;">
+                                        <input id="{{ $price_desc->type }}_input_text" type="text" style="width:60%;">
+                                        <button id="{{ $price_desc->type }}_max"
+                                            onclick="max_button('{{ $type }}', '{{ $price_desc->type }}');">최대</button>
+                                    </td>
+                                    <td style="text-align:center; vertical-align: middle;">
+                                        <button style="width:100%; text-align:center; vertical-align: middle;"
+                                            onclick="swap_button('{{ $type }}', '{{ $price_desc->type }}');">
+                                            {{ $korean_type }}
+                                        </button>
+                                    </td>
+                                </tr>
+                            @endforeach                          
                         </table>
                     </div>
                 </div>
@@ -211,11 +102,12 @@
             $(window).resize(adjustFontSize);
 
             setInterval(price_ajax, 1000);
-            url = "{{ route('swap_price_ajax') }}";
+            price_url = "{{ route('swap_price_ajax') }}";
+
 
             function price_ajax() {
                 $.ajax({
-                    url: url, // 요청 보낼 URL
+                    url: price_url, // 요청 보낼 URL
                     method: "GET", // GET 요청
                     dataType: "json", // 응답 데이터 타입 (JSON)
                     success: function(data) {
@@ -231,12 +123,12 @@
 
                                 @if ($swap_to == 'krw')
                                     $("#" + data.api_data[i].type + "_price").text(data.api_data[i]
-                                        .buy3_price.toLocaleString() + " 원");
-                                    api_data_price = data.api_data[i].buy3_price;
+                                        .buy0_price.toLocaleString() + " 원");
+                                    api_data_price = data.api_data[i].buy0_price;
                                 @elseif ($swap_to == 'coin')
                                     $("#" + data.api_data[i].type + "_price").text(data.api_data[i]
-                                        .sell3_price.toLocaleString() + " 원");
-                                    api_data_price = data.api_data[i].sell3_price;
+                                        .sell0_price.toLocaleString() + " 원");
+                                    api_data_price = data.api_data[i].sell0_price;
                                 @endif
 
                                 if (api_data_price != before_price) {
@@ -248,8 +140,12 @@
                                             $("#" + data.api_data[index].type + "_price")
                                                 .css(
                                                     "font-weight", "normal");
-                                        }, 200);
+                                        }, 600);
                                     })(i); // 함수 클로저를 사용하여 index 값을 보존
+                                    @if ($swap_to == 'coin')
+                                        $("#" + data.api_data[i].type + "_input_text").val("");
+                                    @endif
+
                                 }
                             } // if문 끝
 
@@ -258,12 +154,35 @@
                         user['KRW_using'] = data.user_krw_using;
                         user['BTC'] = data.user_btc;
                         user['BTC_using'] = data.user_btc_using;
+
+                        user['ETH'] = data.user_eth;
+                        user['ETH_using'] = data.user_eth_using;
+
+                        user['BCH'] = data.user_bch;
+                        user['BCH_using'] = data.user_bch_using;
+
+                        user['ETC'] = data.user_etc;
+                        user['ETC_using'] = data.user_etc_using;
+
+                        user['EOS'] = data.user_eos;
+                        user['EOS_using'] = data.user_eos_using;
+
+                        user['XRP'] = data.user_xrp;
+                        user['XRP_using'] = data.user_xrp_using;
+
+                        user['ADA'] = data.user_ada;
+                        user['ADA_using'] = data.user_ada_using;
+
+                        user['DOGE'] = data.user_doge;
+                        user['DOGE_using'] = data.user_btc_using;
                     }, // success 함수 끝
                     error: function() {
                         // 실패 시 에러 메시지 출력
                     }
                 });
             }
+
+
         });
 
 
@@ -288,30 +207,45 @@
             }
         }
 
+        swap_url = "{{ route('swap_button_ajax') }}";
 
-        function swap_ajax(type, coin) {
-         
+        function swap_button(type, coin) {
+
+            amount = $("#" + coin + "_input_text").val();
+            price_text = $("#" + coin + "_price").text();
+
+
+            price = parseFloat(price_text.replace(/,/g, '').replace(' 원', ''));
+            expectation_price = price * amount;
 
 
 
-            $.ajax({
-                url: "", // 요청할 URL
-                method: "GET", // HTTP 메서드
-                data: {
-                    type: category,
-                    coin: coin,
-                    content: content,
-                    _token: '{{ csrf_token() }}'
-                },
-                success: function(data) {
-                   alert(data); // 응답 데이터 표시
-                },
-                error: function() {
-                    $("#response").html("Error occurred.");
+            if (amount > 0 && price > 0) {
+                if (confirm(amount + "" + coin + "가 " + price_text + "에 {{ $korean_type }} 됩니다. (예상체결액 : " +
+                        expectation_price
+                        .toLocaleString() + "원)")) {
+                    // 사용자가 확인 버튼을 눌렀을 때 실행할 코드
+                    $.ajax({
+                        url: swap_url, // 요청할 URL
+                        method: "POST", // HTTP 메서드
+                        data: {
+                            type: type,
+                            coin: coin,
+                            amount: amount,
+                            price: price,
+                            _token: '{{ csrf_token() }}'
+                        },
+                        success: function(data) {
+                            alert(data); // 응답 데이터 표시
+                        },
+                        error: function(xhr, status, error) {
+                            alert(xhr.responseText);
+                        }
+                    });
                 }
-            });
-
-
+            } else {
+                alert("수량은 0이상 입력하여주세요.");
+            }
         }
     </script>
 
