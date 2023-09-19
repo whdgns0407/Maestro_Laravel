@@ -62,14 +62,14 @@
                                     style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB">
                                     10,000,000</td>
                                 <td style="width:20%; text-align: center; vertical-align: middle; background-color : white"
-                                    id="buy_td">
-                                    <button style="width:100%; background-color: white">
-                                        <b>매수</b>
+                                    id="buy_td" onclick="trade_type_button('buy');">
+                                    <button style="width:100%; background-color: white" id="buy_button">
+                                        매수
                                     </button>
                                 </td>
                                 <td style="width:20%; text-align: center; vertical-align: middle; background-color : white"
-                                    id="sell_td">
-                                    <button style="width:100%; background-color: white">
+                                    id="sell_td" onclick="trade_type_button('sell');">
+                                    <button style="width:100%; background-color: white" id="sell_button">
                                         매도
                                     </button>
                                 </td>
@@ -268,11 +268,47 @@
 
 
 
-            $type = "buy";
-
-
 
         });
+
+
+
+        type = "buy";
+
+
+        $('#buy_button').css('font-weight', 'bold');
+
+        function trade_type_button(type_button) {
+            type = type_button;
+            $('#buy_button').css('backgrount-color', 'white');
+            $('#sell_button').css('backgrount-color', 'white');
+
+            $('#buy_button').css('font-weight', 'normal');
+            $('#sell_button').css('font-weight', 'normal');
+
+            $('#buy_button').css('color', 'black');
+            $('#sell_button').css('color', 'black');
+
+
+            if (type == "buy") {
+                korean_type = "매수";
+                color = "#FBEFEF";
+                color_bold = "red";
+            } else if (type == "sell") {
+                korean_type = "매도";
+                color = '#EFFBFB';
+                color_bold = "blue";
+            } else {
+                korean_type = "error";
+                color = 'black';
+                color_bold = "black";
+            }
+            $('#type_message').text(korean_type);
+            $('#type_button').css('background-color', color);
+            $('#type_button').text(korean_type + "하기");
+            $("#" + type + "_button").css('font-weight', 'bold');
+            $("#" + type + "_button").css('color', color_bold);
+        }
     </script>
 
 
