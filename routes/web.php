@@ -74,6 +74,23 @@ Route::middleware(['auth'])->group(function () {
     // SWAP 버튼 클릭
     Route::post('/swap/button_ajax', [App\Http\Controllers\swapController::class, 'swap_button_ajax'])->name('swap_button_ajax');
 
+
+
+
+
+
+
+    // 거래소 (trade)
+    Route::get('/trade/{coin}', [App\Http\Controllers\TradeController::class, 'index'])->name('trade_index');
+
+    // 호가 ajax get 요청으로 들고옴
+    Route::get('/trade_hoga_ajax/{coin}', [App\Http\Controllers\TradeController::class, 'trade_hoga_ajax'])->name('trade_hoga_ajax');
+
+
+
+    // 거래소 (매수, 매도하기 버튼 ajax)
+    Route::post('/trade_input', [App\Http\Controllers\TradeController::class, 'trade_input'])->name('trade_input');
+
     // 관리자
     Route::get('/admin/customer/{status}', [App\Http\Controllers\admin\customerController::class, 'get'])->name('admin_customer_get');
 
@@ -97,8 +114,10 @@ Route::get('/img/view/{uuid}', [App\Http\Controllers\imgController::class, 'img_
 Route::get('/', [App\Http\Controllers\indexController::class, 'index'])->name('welcome');
 
 
-// 거래소 (trade)
-Route::get('/trade/{coin}', [App\Http\Controllers\TradeController::class, 'index'])->name('trade_index');
+
+
+
+
 
 // 회원가입 get요청
 Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register_get'])->name('register_get');
