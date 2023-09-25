@@ -28,8 +28,17 @@
                                     1.004
                                 </td>
                                 <td colspan="1"
-                                    style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB">
-                                    10,000,000
+                                    style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB" id="sell_9">
+                                    10,000,009
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="width:40%; text-align: center; vertical-align: middle;">
+                                    1.004
+                                </td>
+                                <td colspan="1"
+                                    style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB" id="sell_8">
+                                    10,000,008
                                 </td>
                             </tr>
                             <tr>
@@ -38,7 +47,7 @@
                                 </td>
                                 <td colspan="1"
                                     style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB">
-                                    10,000,000
+                                    10,000,007
                                 </td>
                             </tr>
                             <tr>
@@ -47,16 +56,7 @@
                                 </td>
                                 <td colspan="1"
                                     style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB">
-                                    10,000,000
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" style="width:40%; text-align: center; vertical-align: middle;">
-                                    1.004
-                                </td>
-                                <td colspan="1"
-                                    style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB">
-                                    10,000,000
+                                    10,000,006
                                 </td>
 
                                 <td style="width:20%; text-align: center; vertical-align: middle;">
@@ -72,7 +72,7 @@
                                 </td>
                                 <td colspan="1"
                                     style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB">
-                                    10,000,000
+                                    10,000,005
                                 </td>
                                 <td style="width:20%; text-align: center; vertical-align: middle;">
                                     주문 가능 {{ $coin }}
@@ -87,7 +87,7 @@
                                 </td>
                                 <td colspan="1"
                                     style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB">
-                                    10,000,000
+                                    10,000,004
                                 </td>
                                 <td style="width:20%; text-align: center; vertical-align: middle; background-color : white"
                                     id="buy_td" onclick="trade_type_button('buy');">
@@ -108,7 +108,7 @@
                                 </td>
                                 <td colspan="1"
                                     style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB">
-                                    10,000,000
+                                    10,000,003
                                 </td>
                                 <td style="width:20%; text-align: center; vertical-align: middle;">
                                     <font id="type_message">매수</font>가격
@@ -123,7 +123,7 @@
                                 </td>
                                 <td colspan="1"
                                     style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB">
-                                    10,000,000
+                                    10,000,002
                                 </td>
                                 <td style="width:20%; text-align: center; vertical-align: middle;">
                                     주문수량
@@ -138,7 +138,7 @@
                                 </td>
                                 <td colspan="1"
                                     style="width:20%; text-align: center; vertical-align: middle; background-color : #EFFBFB">
-                                    10,000,000
+                                    10,000,001
                                 </td>
                                 <td style="width:20%; text-align: center; vertical-align: middle;">
                                     주문총액
@@ -447,7 +447,7 @@
                         _token: '{{ csrf_token() }}',
                     },
                     success: function(data) {
-                        alert(data)
+                        alert(data);
                     },
                     error: function(xhr, status, error) {
                         alert(xhr.responseText);
@@ -462,13 +462,26 @@
 
         setInterval(price_ajax, 1000);
 
+
         function price_ajax() {
             $.ajax({
                 url: "{{ route('trade_hoga_ajax', ['coin' => $coin]) }}", // 요청 보낼 URL
                 method: "GET", // GET 요청
                 dataType: "json", // 응답 데이터 타입 (JSON)
                 success: function(data) {
-                    console.log(data);
+                    for (i = 0; i < data.buy.length; i++) {
+
+
+                    }
+
+
+
+                    for (i = 0; i < data.sell.length; i++) {
+
+                    }
+
+
+        
                 }, // success 함수 끝
                 error: function() {
                     // 실패 시 에러 메시지 출력
