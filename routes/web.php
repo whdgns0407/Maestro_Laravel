@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+// 라우트에 정의하고 나중에 한꺼번에 컨트롤러로 옮기기
+
 
 // 로그인한 사용자만
 Route::middleware(['auth'])->group(function () {
